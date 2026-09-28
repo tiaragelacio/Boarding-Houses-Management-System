@@ -1,0 +1,11 @@
+.git
+.gitignore
+node_modules
+.env
+.env.*
+!.env.example
+.vercel
+*.docx
+*.pdf
+uploads/rooms/*
+uploads/payment_proofs/*

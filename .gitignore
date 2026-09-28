@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+ca.pem
+
+# Dependencies
+node_modules/
+
+# Runtime-generated uploads and local deployment output.
+uploads/rooms/*
+uploads/payment_proofs/*
+.vercel/

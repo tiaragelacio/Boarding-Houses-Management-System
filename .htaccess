@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^tenant/(.*)$ /Tenant/$1 [R=301,L]

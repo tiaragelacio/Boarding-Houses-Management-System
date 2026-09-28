@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: monticello-villas
+    runtime: docker
+    region: singapore # Choose singapore, oregon, frankfurt, or ohio
+    plan: free # Change to starter if attaching a persistent disk
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: DB_SSL_CA
+        value: ca.pem
+      - key: DB_SSL_VERIFY
+        value: "true"
+      - key: BMS_GMAIL_FROM
+        sync: false
+      - key: BMS_GMAIL_APP_PASSWORD
+        sync: false
+      - key: BMS_GMAIL_FROM_NAME
+        value: Ellen Boarding House
+      - key: BMS_ADMIN_EMAIL
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_FROM_EMAIL
+        sync: false
+    # To enable persistent storage for uploads on a paid plan (Starter or higher):
+    # disk:
+    #   name: bms-uploads
+    #   mountPath: /var/www/html/uploads
+    #   sizeGB: 1
